@@ -112,15 +112,16 @@
 
         </div>
 
-    </section>
+    
 
     <section id="about" class="py-24 max-w-4xl mx-auto px-6">
 
-        <h2 class="text-primary text-sm tracking-widest mb-4">// ABOUT ME</h2>
+        <div class="text-center mb-12">
+    <h2 class="text-primary text-sm tracking-widest mb-4">// ABOUT ME</h2>
+    <h3 class="text-3xl font-bold text-white">Turning Data Into <span class="text-primary">Insights</span></h3>
+</div>
 
-        <h3 class="text-3xl font-bold mb-6 text-white text-3xl">Turning Data Into <span class="text-primary">Insights</span></h3>
-
-        <section id="about" class="py-20 bg-[#0B0F1A] px-5">
+        
 
     <div class="max-w-xl mx-auto">
 
@@ -194,9 +195,12 @@
 
         <div class="max-w-6xl mx-auto">
 
-            <h2 class="text-primary text-sm tracking-widest mb-4">// TECH STACK</h2>
-
-            <h3 class="text-4xl font-bold mb-12 text-white text-3xl">Skills & <span class="text-primary">Tools</span></h3>
+           <div class="text-center mb-16">
+    <h2 class="text-primary text-[10px] tracking-[0.4em] mb-3 font-mono uppercase font-bold opacity-80">// TECH STACK</h2>
+    <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tighter">
+        Skills & <span class="text-primary">Tools</span>
+    </h3>
+</div>
 
             
 
@@ -350,140 +354,373 @@
 
         
 
-    
-<section id="projects" class="py-20 bg-[#0B0F1A] px-5">
-    <div class="max-w-6xl mx-auto">
+<section id="projects" class="py-24 bg-[#0B0F1A] px-6">
+    <div class="max-w-7xl mx-auto">
         
-        <header class="text-center md:text-left mb-12">
-            <h2 class="text-primary text-[10px] tracking-[0.3em] mb-3 font-mono uppercase font-bold text-shadow-sm">
-                // PROJECTS
-            </h2>
-            <h3 class="text-3xl md:text-5xl font-bold text-white tracking-tighter">
+        <header class="text-center mb-16 relative z-10">
+            <h2 class="text-primary text-[10px] tracking-[0.4em] mb-3 font-mono uppercase font-bold opacity-80">// PROJECTS</h2>
+            <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tighter">
                 Featured <span class="text-primary italic">Work</span>
             </h3>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <article class="bg-[#161B28] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl transition-all duration-500 hover:border-primary/20 group">
-                <div class="h-60 relative overflow-hidden">
-                    <img src="https://i.ibb.co/8g8Mqbbc/Stock-Cake-Crimson-Sample-Testing-3124104-medium.webp" alt="Auxilio Blood Bank App" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#161B28] via-transparent to-transparent"></div>
+            <article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+                
+                <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+                <div class="relative h-52 overflow-hidden z-10 bg-[#111622]">
+                    <img src="https://i.ibb.co/8g8Mqbbc/Stock-Cake-Crimson-Sample-Testing-3124104-medium.webp" alt="Auxilio" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-6 p-2.5 bg-[#1a2131]/50 backdrop-blur-xl rounded-xl border border-white/10 text-primary shadow-2xl z-20 transition-all duration-500 group-hover:border-primary/50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.251a2 2 0 01-1.532 0l-.628-.251a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-.34.34a2 2 0 001.22 3.398l3.245.324a2 2 0 001.492-.547l2.183-2.183a2 2 0 012.828 0l2.183 2.183a2 2 0 001.492.547l3.245-.324a2 2 0 001.22-3.398l-.34-.34z" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="px-7 pb-10 -mt-6 relative z-10">
-                    <div class="flex flex-col gap-2 mb-6">
-                        <span class="w-fit text-[9px] bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full font-bold tracking-widest uppercase font-mono">GRADUATION PROJECT</span>
-                        <span class="text-[10px] text-gray-500 font-mono">Sep 2022 — May 2023</span>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Graduation Project</span>
+                        <span class="text-[9px] text-gray-500 font-mono italic">2022 — 2023</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Auxilio — Blood Bank App</h4>
-                    <p class="text-gray-400 text-[13px] leading-relaxed mb-8 font-medium">A mobile platform designed to optimize blood donation management, connecting hospitals with donors through a seamless, real-time experience.</p>
-                    <div class="space-y-6 mb-10">
-                        <div class="flex gap-4"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#2DD4BF] flex-shrink-0"></div><div><h5 class="text-[13px] font-bold text-white uppercase tracking-wider">Leading UI/UX</h5><p class="text-gray-500 text-[11px] mt-1 leading-normal">Created intuitive wireframes and high-fidelity prototypes.</p></div></div>
-                        <div class="flex gap-4"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#2DD4BF] flex-shrink-0"></div><div><h5 class="text-[13px] font-bold text-white uppercase tracking-wider">Technical Documentation</h5><p class="text-gray-500 text-[11px] mt-1 leading-normal">Co-authored technical documentation and user manuals.</p></div></div>
+                    
+                    <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Auxilio — Blood Bank App</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 line-clamp-3 font-medium group-hover:text-gray-300 transition-colors">A mobile platform designed to optimize blood donation management, connecting hospitals with donors through a seamless, real-time experience.</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">UI/UX Design</span>
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">Documentation</span>
                     </div>
-                    <a href="#" class="block w-full text-center bg-white text-[#0B0F1A] text-xs font-black py-4 rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white uppercase tracking-widest shadow-lg shadow-white/5">View Case Study</a>
+
+                    <div class="mt-auto pt-6 border-t border-white/5">
+                        <a href="#" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                            View Case Study <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
                 </div>
             </article>
 
-            <article class="bg-[#161B28] rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl transition-all duration-500 hover:border-primary/20 group">
-                <div class="h-60 relative overflow-hidden">
-                    <img src="https://i.ibb.co/Z6PpfZpM/Screenshot-2026-03-09-100507.png" alt="Sales Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#161B28] via-transparent to-transparent"></div>
+            <article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+                
+                <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+                <div class="relative h-52 overflow-hidden z-10 bg-[#111622]">
+                    <img src="https://i.ibb.co/Z6PpfZpM/Screenshot-2026-03-09-100507.png" alt="Sales Dashboard" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-6 p-2.5 bg-[#1a2131]/50 backdrop-blur-xl rounded-xl border border-white/10 text-primary shadow-2xl z-20 transition-all duration-500 group-hover:border-primary/50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="px-7 pb-10 -mt-6 relative z-10">
-                    <div class="flex flex-col gap-2 mb-6">
-                        <span class="w-fit text-[9px] bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full font-bold tracking-widest uppercase font-mono">TRAINING IN DIGILIANS</span>
-                        <span class="text-[10px] text-gray-500 font-mono">Feb 2026</span>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Training Digilians</span>
+                        <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Interactive Sales & Profit Dashboard</h4>
-                    <p class="text-gray-400 text-[13px] leading-relaxed mb-8 font-medium">Built a comprehensive sales performance dashboard in Excel using data modeling and advanced DAX measures.</p>
-                    <div class="space-y-6 mb-10">
-                        <div class="flex gap-4"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#2DD4BF] flex-shrink-0"></div><div><h5 class="text-[13px] font-bold text-white uppercase tracking-wider">Data Modeling</h5><p class="text-gray-500 text-[11px] mt-1 leading-normal">Utilized Power Pivot and DAX for business insights.</p></div></div>
-                        <div class="flex gap-4"><div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#2DD4BF] flex-shrink-0"></div><div><h5 class="text-[13px] font-bold text-white uppercase tracking-wider">Dynamic Visualizations</h5><p class="text-gray-500 text-[11px] mt-1 leading-normal">Designed interactive charts for KPI tracking.</p></div></div>
+                    
+                    <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Sales & Profit Dashboard</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 line-clamp-3 font-medium group-hover:text-gray-300 transition-colors">Built a comprehensive sales performance dashboard in Excel using data modeling and advanced DAX measures for real-time KPI tracking.</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">Power Pivot</span>
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">DAX Modeling</span>
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">Excel BI</span>
                     </div>
-                    <a href="https://github.com/mahmoudahmed1515/Interactive-Sales-Profit-Dashboard" class="block w-full text-center bg-white text-[#0B0F1A] text-xs font-black py-4 rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white uppercase tracking-widest shadow-lg shadow-white/5">View Case Study</a>
+
+                    <div class="mt-auto pt-6 border-t border-white/5">
+                        <a href="https://github.com/mahmoudahmed1515/Interactive-Sales-Profit-Dashboard" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                            View Case Study <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+                
+                <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+                <div class="relative h-52 overflow-hidden z-10 bg-[#111622]">
+                    <img src="https://i.ibb.co/S4SYQNft/Screenshot-2026-03-10-211912.png" alt="E-Commerce Analysis" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-4 left-6 p-2.5 bg-[#1a2131]/50 backdrop-blur-xl rounded-xl border border-white/10 text-primary shadow-2xl z-20 transition-all duration-500 group-hover:border-primary/50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Advanced Analytics</span>
+                        <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+                    </div>
+                    
+                    <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">E-Commerce-Sales-Analysis</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6 line-clamp-3 font-medium group-hover:text-gray-300 transition-colors">Transforming raw transactional data into actionable business intelligence. Monitoring logistics efficiency across different regions and product categories.</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">Business Intelligence</span>
+                        <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 rounded-md font-bold uppercase transition-all duration-500 group-hover:border-primary/30 group-hover:text-primary tracking-tighter">Logistics</span>
+                    </div>
+
+                    <div class="mt-auto pt-6 border-t border-white/5">
+                        <a href="https://github.com/mahmoudahmed1515/E-Commerce-Sales-Analysis" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                            View Case Study <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+                        </a>
+                    </div>
                 </div>
             </article>
 
         </div>
     </div>
 </section>
-
   
   
   
   
-<section id="certifications" class="py-20 bg-[#0B0F1A] px-5">
-    <div class="max-w-6xl mx-auto">
-        <header class="mb-14 text-center md:text-left">
-            <h2 class="text-primary text-[14px] tracking-[0.4em] mb-4 font-mono uppercase font-bold text-shadow-sm">// CREDENTIALS</h2>
+<section id="certifications" class="py-24 bg-[#0B0F1A] px-6">
+    <div class="max-w-7xl mx-auto">
+        
+        <header class="text-center mb-16 relative z-10">
+            <h2 class="text-primary text-[10px] tracking-[0.4em] mb-3 font-mono uppercase font-bold opacity-80">// CREDENTIALS</h2>
             <h3 class="text-4xl md:text-6xl font-bold text-white tracking-tighter">Certifications</h3>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="group bg-[#161B28] rounded-[2.5rem] border border-white/5 shadow-2xl transition-all duration-500 hover:border-primary/40 flex flex-col overflow-hidden relative">
-                
-                <div class="h-80 w-full relative overflow-hidden bg-white">
-                    <img src="https://i.ibb.co/DDnHLgmj/IMG.jpg" 
-                         alt="Google Certificate" 
-                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#161B28] via-[#161B28]/40 to-transparent"></div>
-                </div>
-                
-                <div class="p-10 pt-4 flex-grow bg-[#161B28] relative -mt-8"> 
-                    <h4 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">Google Data Analytics</h4>
-                    
-                    <p class="text-primary text-[13px] md:text-[15px] font-mono mb-8 uppercase tracking-[0.1em] font-semibold opacity-90">Google (via Coursera) • Feb 2026</p>
-                    
-                    <div class="space-y-4 mb-10">
-                        <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed flex items-start">
-                            <span class="text-primary mr-3 mt-1.5 text-[20px]">◆</span>
-                            <span>Mastered full data analysis workflow: Ask, Prepare, Analyze, Share, Act.</span>
-                        </p>
-                        <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed flex items-start">
-                            <span class="text-primary mr-3 mt-1.5 text-[20px]">◆</span>
-                            <span>Proficient in SQL, Data Cleaning, and Visualization with Tableau.</span>
-                        </p>
-                    </div>
-                    
-                    <a href="https://coursera.org/share/4421698aa1cf5f707b324c5330e393d7" class="block w-full text-center bg-primary/10 hover:bg-primary hover:text-black border border-primary/20 py-4 rounded-xl text-[15px] font-bold text-white transition-all uppercase tracking-widest">
-                        View Full Certificate →
-                    </a>
-                </div>
-            </div>
+            <article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+    
+    <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
 
-            <div class="group bg-[#161B28] rounded-[2.5rem] border border-white/5 shadow-2xl transition-all duration-500 hover:border-primary/40 flex flex-col overflow-hidden relative">
-                <div class="h-80 w-full relative overflow-hidden bg-white">
-                    <img src="https://i.ibb.co/dwJSNfpY/IMG.jpg" 
-                         alt="IBM Certificate" 
-                         class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#161B28] via-[#161B28]/40 to-transparent"></div>
-                </div>
-                
-                <div class="p-10 pt-4 flex-grow bg-[#161B28] relative -mt-8">
-                    <h4 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">Delivering Quality Work</h4>
-                    <p class="text-primary text-[13px] md:text-[15px] font-mono mb-8 uppercase tracking-[0.1em] font-semibold opacity-90">IBM (via Coursera) • Feb 2026</p>
-                    
-                    <div class="space-y-4 mb-10">
-                        <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed flex items-start">
-                            <span class="text-primary mr-3 mt-1.5 text-[20px]">◆</span>
-                            <span>Applied Agile principles to enhance productivity and manage requirements.</span>
-                        </p>
-                        <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed flex items-start">
-                            <span class="text-primary mr-3 mt-1.5 text-[20px]">◆</span>
-                            <span>Implemented a structured 5-step quality management process.</span>
-                        </p>
-                    </div>
-                    
-                    <a href="https://coursera.org/share/1ef8840341144096cb006c0e5f8782d7" class="block w-full text-center bg-primary/10 hover:bg-primary hover:text-black border border-primary/20 py-4 rounded-xl text-[15px] font-bold text-white transition-all uppercase tracking-widest">
-                        View Full Certificate →
-                    </a>
-                </div>
-            </div>
-
+    <div class="relative h-52 overflow-hidden z-10"> 
+        <img src="https://i.ibb.co/DDnHLgmj/IMG.jpg" alt="Certificate" 
+             class="w-full h-full object-cover object-top opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/20 to-transparent"></div>
+        
+        <div class="absolute bottom-4 left-6 p-2 bg-white/5 backdrop-blur-xl rounded-lg border border-white/10 shadow-2xl z-20 group-hover:border-primary/50 transition-colors duration-500">
+             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" class="h-4" alt="Google">
         </div>
+    </div>
+
+    <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Professional Certificate</span>
+            <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+        </div>
+        
+        <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Foundations: Data, Data, Everywhere</h4>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">SQL</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Tableau</span>
+        </div>
+
+        <div class="space-y-3 mb-8 flex-grow">
+            <p class="text-gray-400 text-xs leading-relaxed flex items-start group-hover:text-gray-300 transition-colors">
+                <span class="text-primary mr-2 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">◆</span>
+                Mastered full data analysis workflow: Ask, Prepare, Analyze, Share, Act.
+            </p>
+        </div>
+
+        <div class="pt-6 border-t border-white/5">
+            <a href="#" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                Verify Credential 
+                <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+            </a>
+        </div>
+    </div>
+</article>
+
+            <article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+    
+    <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+    <div class="relative h-52 overflow-hidden z-10 bg-[#111622]"> 
+        <img src="https://i.ibb.co/dwJSNfpY/IMG.jpg" alt="IBM Certificate" 
+             class="w-full h-full object-cover object-top opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+        
+        <div class="absolute bottom-4 left-6 px-3 py-1.5 bg-[#0062ff]/10 backdrop-blur-xl rounded-lg border border-white/10 shadow-2xl z-20 group-hover:border-primary/50 transition-all duration-500">
+             <p class="text-[#0062ff] font-black text-[12px] tracking-tighter filter brightness-125">IBM</p>
+        </div>
+    </div>
+
+    <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Professional Skills</span>
+            <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+        </div>
+        
+        <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Delivering Quality Work with Agility</h4>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Agile</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Quality Mgmt</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Productivity</span>
+        </div>
+
+        <div class="space-y-3 mb-8 flex-grow">
+            <p class="text-gray-400 text-xs leading-relaxed flex items-start group-hover:text-gray-300 transition-colors">
+                <span class="text-primary mr-2 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">◆</span>
+                Applied Agile principles to enhance productivity and manage requirements.
+            </p>
+        </div>
+
+        <div class="pt-6 border-t border-white/5">
+            <a href="https://coursera.org/share/1ef8840341144096cb006c0e5f8782d7" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                Verify Credential 
+                <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+            </a>
+        </div>
+    </div>
+</article>
+    
+<article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+    
+    <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+    <div class="relative h-52 overflow-hidden z-10 bg-[#111622]"> 
+        <img src="https://i.ibb.co/zV0N2Dyv/Screenshot-2026-04-22-181420.png" alt="Google Data Analytics - Step 1" 
+             class="w-full h-full object-cover object-top opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+        
+        <div class="absolute bottom-4 left-6 p-2 bg-white/5 backdrop-blur-xl rounded-lg border border-white/10 shadow-2xl z-20 group-hover:border-primary/50 transition-colors duration-500">
+             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" class="h-4" alt="Google">
+        </div>
+    </div>
+
+    <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Foundation Course</span>
+            <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+        </div>
+        
+        <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Ask Questions to Make Data-Driven Decisions</h4>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Effective Questioning</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Problem Solving</span>
+        </div>
+
+        <div class="space-y-3 mb-8 flex-grow">
+            <p class="text-gray-400 text-xs leading-relaxed flex items-start group-hover:text-gray-300 transition-colors">
+                <span class="text-primary mr-2 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">◆</span>
+                Defined structured thinking and how to ask SMART questions to drive business insights.
+            </p>
+        </div>
+
+        <div class="pt-6 border-t border-white/5">
+            <a href="https://coursera.org/share/ae7a0ef7345652a0961143b4ee32aa8b" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                Verify Credential 
+                <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+            </a>
+        </div>
+    </div>
+</article>
+          
+<article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+    
+    <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+    <div class="relative h-52 overflow-hidden z-10 bg-[#111622]"> 
+        <img src="https://i.ibb.co/GvTkzbNR/Screenshot-2026-04-22-181723.png" alt="Google Data Analytics - Step 2" 
+             class="w-full h-full object-cover object-top opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+        
+        <div class="absolute bottom-4 left-6 p-2 bg-white/5 backdrop-blur-xl rounded-lg border border-white/10 shadow-2xl z-20 group-hover:border-primary/50 transition-colors duration-500">
+             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" class="h-4" alt="Google">
+        </div>
+    </div>
+
+    <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Data Preparation</span>
+            <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+        </div>
+        
+        <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Prepare Data for Exploration</h4>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Data Types</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">SQL Basics</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Data Ethics</span>
+        </div>
+
+        <div class="space-y-3 mb-8 flex-grow">
+            <p class="text-gray-400 text-xs leading-relaxed flex items-start group-hover:text-gray-300 transition-colors">
+                <span class="text-primary mr-2 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">◆</span>
+                Explored how to use SQL and spreadsheets to collect, extract, and organize data securely.
+            </p>
+        </div>
+
+        <div class="pt-6 border-t border-white/5">
+            <a href="https://coursera.org/share/8ac5d0827007ebb22f805881aa109e17" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                Verify Credential 
+                <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+            </a>
+        </div>
+    </div>
+</article>
+          
+<article class="group relative bg-[#111622] rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col">
+    
+    <div class="absolute -inset-px bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0"></div>
+
+    <div class="relative h-52 overflow-hidden z-10 bg-[#111622]"> 
+        <img src="https://i.ibb.co/svzP2qtw/Screenshot-2026-04-22-182038.png" alt="Google Data Analytics - Step 3" 
+             class="w-full h-full object-cover object-top opacity-50 group-hover:opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111622] via-[#111622]/40 to-transparent"></div>
+        
+        <div class="absolute bottom-4 left-6 p-2 bg-white/5 backdrop-blur-xl rounded-lg border border-white/10 shadow-2xl z-20 group-hover:border-primary/50 transition-colors duration-500">
+             <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" class="h-4" alt="Google">
+        </div>
+    </div>
+
+    <div class="p-8 flex flex-col flex-grow relative z-10 bg-[#111622]">
+        <div class="flex items-center justify-between mb-4">
+            <span class="text-primary text-[10px] font-bold tracking-widest uppercase opacity-80">Data Cleaning</span>
+            <span class="text-[9px] text-gray-500 font-mono italic">Feb 2026</span>
+        </div>
+        
+        <h4 class="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-500">Process Data from Dirty to Clean</h4>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Data Integrity</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">SQL Cleaning</span>
+            <span class="text-[9px] px-2.5 py-1 bg-white/5 border border-white/10 text-gray-400 group-hover:border-primary/30 group-hover:text-primary rounded-md font-bold uppercase transition-all duration-500">Verification</span>
+        </div>
+
+        <div class="space-y-3 mb-8 flex-grow">
+            <p class="text-gray-400 text-xs leading-relaxed flex items-start group-hover:text-gray-300 transition-colors">
+                <span class="text-primary mr-2 mt-1 opacity-70 group-hover:opacity-100 transition-opacity">◆</span>
+                Mastered techniques for checking data integrity and performing automated cleaning using SQL and Spreadsheets.
+            </p>
+        </div>
+
+        <div class="pt-6 border-t border-white/5">
+            <a href="https://coursera.org/share/7dcc30243075d371a3b977005ded8635" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-[0.2em] flex items-center gap-2 group/link">
+                Verify Credential 
+                <span class="inline-block transform group-hover/link:translate-x-2 transition-transform duration-300">→</span>
+            </a>
+        </div>
+    </div>
+</article>
+            </div>
     </div>
 </section>
   
