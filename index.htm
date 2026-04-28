@@ -88,21 +88,22 @@
 
 
       <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0F1A]">
-    <video autoplay loop muted playsinline class="back-video">
-    <source src="https://github.com/mahmoudahmed1515/mahmoudahmed.github.io/blob/main/14471987_1920_1080_30fps.mp4" type="video/mp4">
-</video>
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="https://raw.githubusercontent.com/mahmoudahmed1515/mahmoudahmed.github.io/main/14471987_1920_1080_30fps.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
 
-    <div class="absolute inset-0 z-1 bg-black/40"></div>
+    <div class="absolute inset-0 z-10 bg-black/50"></div>
 
-    <div class="relative z-10 text-center px-6">
+    <div class="relative z-20 text-center px-6">
         <div class="relative mb-8 inline-block">
-            <div class="w-32 h-32 rounded-full border-2 border-primary p-1 overflow-hidden glow bg-darkBg">
+            <div class="w-32 h-32 rounded-full border-2 border-blue-500 p-1 overflow-hidden shadow-[0_0_20px_rgba(59,130,246,0.5)] bg-[#0B0F1A]">
                 <img src="https://i.ibb.co/dsspJ0Mf/1689009792980.jpg" alt="Mahmoud Ahmed" class="w-full h-full rounded-full object-cover">
             </div>
         </div>
         
         <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight">
-            Mahmoud <span class="text-primary">Ahmed</span>
+            Mahmoud <span class="text-blue-500">Ahmed</span>
         </h1>
         
         <p class="max-w-2xl mx-auto text-gray-200 text-lg md:text-xl leading-relaxed mb-10 drop-shadow-lg">
@@ -110,7 +111,7 @@
         </p>
         
         <div class="flex gap-4 justify-center">
-            <a href="#projects" class="bg-primary text-darkBg px-8 py-3 rounded-md font-bold hover:opacity-90 transition shadow-lg">Explore My Work</a>
+            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-md font-bold hover:bg-blue-700 transition shadow-lg">Explore My Work</a>
             <a href="#contact" class="border border-white/30 backdrop-blur-sm px-8 py-3 rounded-md font-bold hover:bg-white/10 transition text-white">Get In Touch</a>
         </div>
     </div>
