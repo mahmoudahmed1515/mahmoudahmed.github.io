@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Mahmoud Ahmed</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0062ff;
+            --dark-bg: #050810;
+            --card-bg: rgba(15, 23, 42, 0.4);
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Customization */
+        .navbar-custom {
+            background: rgba(5, 8, 16, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 1.5rem 0;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.6) !important;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 180px 0 100px 0;
+            position: relative;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 98, 255, 0.1);
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .text-primary-custom { color: var(--primary-color); }
+
+        /* Glass Cards */
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 2.5rem;
+            padding: 3.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            text-decoration: none;
+            display: block;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-12px);
+            background: rgba(0, 98, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .icon-box {
+            width: 65px;
+            height: 65px;
+            background: rgba(0, 98, 255, 0.1);
+            border-radius: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        /* Platforms Section */
+        .platforms-section {
+            background-color: #0A101E;
+            padding: 120px 0;
+            border-radius: 5rem 5rem 0 0;
+        }
+
+        .btn-hire {
+            background: #ffffff;
+            color: #050810;
+            border-radius: 50px;
+            padding: 14px 35px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-hire:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: #4b5563;
+        }
+
+        .card-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary-custom">←</span> ASHOUR
+            </a>
+            <div class="ms-auto d-none d-md-flex align-items-center">
+                <a class="nav-link px-4" href="#solutions">Expertise</a>
+                <a class="nav-link px-4" href="#platforms">Profiles</a>
+                <a href="https://mostaql.com/u/Mahmoud_Ahmed0" class="btn-hire ms-4" target="_blank">Start a Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="glow-effect"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h6 class="text-primary-custom fw-bold mb-4" style="letter-spacing: 6px;">// FREELANCE SOLUTIONS</h6>
+                    <h1 class="hero-title mb-5 text-white">
+                        Modern Data <br> 
+                        <span class="text-primary-custom italic fw-light">Architecture & BI.</span>
+                    </h1>
+                    <p class="lead text-secondary mb-5" style="max-width: 650px; line-height: 1.8;">
+                        Transforming complex datasets into high-impact visual stories. I help businesses automate their workflows and make data-driven decisions with precision.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <a href="https://khamsat.com/data/data-analytics/4132680-%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%8A%D8%AA-excel-%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A-%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%BACB%D8%A7%D9%86%D8%A7%D8%AA-%D9%85%D8%B9-%D8%AF%D8%A7%D8%B4%D8%A8%D9%88%D8%B1%D8%AF-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A" class="service-card" target="_blank">
+                        <div class="icon-box">📊</div>
+                        <h3 class="fw-bold mb-3 italic text-white">Advanced Excel Analysis</h3>
+                        <p class="text-secondary">Custom professional Excel development featuring interactive dashboards, automated pivot tables, and advanced financial modeling.</p>
+                        <div class="card-tag text-primary-custom">Order via Khamsat →</div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="platforms" class="platforms-section mt-5">
+        <div class="container text-center">
+            <h6 class="text-primary-custom fw-bold mb-5" style="letter-spacing: 6px;">// GLOBAL CHANNELS</h6>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <a href="https://mostaql.com/u/Mahmoud_Ahmed0" class="service-card py-5" target="_blank">
+                        <h4 class="fw-bold mb-2 text-white">MOSTAQL</h4>
+                        <span class="text-secondary text-uppercase" style="font-size: 0.65rem; letter-spacing: 3px;">Regional Expertise</span>
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <a href="https://khamsat.com/user/mahmoud_ahmed_rashad" class="service-card py-5" target="_blank">
+                        <h4 class="fw-bold mb-2 text-white">KHAMSAT</h4>
+                        <span class="text-secondary text-uppercase" style="font-size: 0.65rem; letter-spacing: 3px;">Direct Micro-Services</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-uppercase fw-bold">
+        <div class="container">
+            © 2026 Mahmoud Ahmed Ashour — Data Solutions
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
