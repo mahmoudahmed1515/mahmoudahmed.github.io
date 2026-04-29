@@ -7,6 +7,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         :root {
@@ -20,14 +21,16 @@
             background-color: var(--dark-bg);
             color: #ffffff;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Navbar Customization */
+        /* Navbar Styling */
         .navbar-custom {
             background: rgba(5, 8, 16, 0.85);
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
+            transition: all 0.4s ease;
         }
 
         .nav-link {
@@ -42,7 +45,7 @@
             color: var(--primary-color) !important;
         }
 
-        /* Hero Section */
+        /* Hero Section with Breathing Glow */
         .hero-section {
             padding: 180px 0 100px 0;
             position: relative;
@@ -50,15 +53,21 @@
 
         .glow-effect {
             position: absolute;
-            top: 10%;
+            top: 5%;
             left: 50%;
             transform: translateX(-50%);
-            width: 500px;
-            height: 500px;
-            background: rgba(0, 98, 255, 0.1);
-            filter: blur(120px);
+            width: 550px;
+            height: 550px;
+            background: rgba(0, 98, 255, 0.12);
+            filter: blur(100px);
             border-radius: 50%;
             z-index: -1;
+            animation: pulse-glow 6s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from { transform: translateX(-50%) scale(1); opacity: 0.5; }
+            to { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
         }
 
         .hero-title {
@@ -68,24 +77,38 @@
             line-height: 1;
         }
 
-        .text-primary-custom { color: var(--primary-color); }
-
-        /* Glass Cards */
+        /* Modern Glass Cards */
         .service-card {
             background: var(--card-bg);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 2.5rem;
-            padding: 3.5rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 2rem;
+            padding: 3rem;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
             height: 100%;
-            text-decoration: none;
+            text-decoration: none !important;
             display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Shine Effect on Hover */
+        .service-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: 0.6s;
+        }
+
+        .service-card:hover::after {
+            left: 100%;
         }
 
         .service-card:hover {
             border-color: var(--primary-color);
-            transform: translateY(-12px);
-            background: rgba(0, 98, 255, 0.08);
+            transform: translateY(-10px);
+            background: rgba(0, 98, 255, 0.05);
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
@@ -97,14 +120,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             color: var(--primary-color);
             font-size: 1.8rem;
+            transition: 0.5s ease;
+        }
+
+        .service-card:hover .icon-box {
+            transform: rotateY(360deg);
+            background: var(--primary-color);
+            color: white;
         }
 
         /* Platforms Section */
         .platforms-section {
-            background-color: #0A101E;
+            background-color: #080b14;
             padding: 120px 0;
             border-radius: 5rem 5rem 0 0;
         }
@@ -113,46 +143,52 @@
             background: #ffffff;
             color: #050810;
             border-radius: 50px;
-            padding: 14px 35px;
+            padding: 12px 30px;
             font-weight: 700;
             font-size: 0.75rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             border: none;
             transition: all 0.3s ease;
-            text-decoration: none;
+            text-decoration: none !important;
         }
 
         .btn-hire:hover {
             background: var(--primary-color);
             color: #fff;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 98, 255, 0.3);
         }
 
         footer {
             padding: 60px 0;
             border-top: 1px solid rgba(255,255,255,0.05);
             font-size: 0.7rem;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             color: #4b5563;
         }
 
         .card-tag {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            opacity: 0.5;
             margin-top: 2rem;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover .card-tag {
+            color: white !important;
+            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.htm">
-                <span class="text-primary-custom">←</span> ASHOUR
+        <div class="container" data-aos="fade-down">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span style="color: var(--primary-color);">←</span> ASHOUR
             </a>
             <div class="ms-auto d-none d-md-flex align-items-center">
                 <a class="nav-link px-4" href="#solutions">Expertise</a>
@@ -166,11 +202,11 @@
         <div class="glow-effect"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
-                    <h6 class="text-primary-custom fw-bold mb-4" style="letter-spacing: 6px;">// FREELANCE SOLUTIONS</h6>
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                    <h6 class="fw-bold mb-4" style="letter-spacing: 6px; color: var(--primary-color);">// FREELANCE SOLUTIONS</h6>
                     <h1 class="hero-title mb-5 text-white">
                         Modern Data <br> 
-                        <span class="text-primary-custom italic fw-light">Architecture & BI.</span>
+                        <span style="color: var(--primary-color);" class="italic fw-light">Architecture & BI.</span>
                     </h1>
                     <p class="lead text-secondary mb-5" style="max-width: 650px; line-height: 1.8;">
                         Transforming complex datasets into high-impact visual stories. I help businesses automate their workflows and make data-driven decisions with precision.
@@ -183,42 +219,41 @@
     <section id="solutions" class="py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://khamsat.com/data/data-analytics/4132680-%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B4%D9%8A%D8%AA-excel-%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A-%D9%84%D8%AA%D8%AD%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%BACB%D8%A7%D9%86%D8%A7%D8%AA-%D9%85%D8%B9-%D8%AF%D8%A7%D8%B4%D8%A8%D9%88%D8%B1%D8%AF-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A" class="service-card" target="_blank">
                         <div class="icon-box">📊</div>
                         <h3 class="fw-bold mb-3 italic text-white">Advanced Excel Analysis</h3>
                         <p class="text-secondary">Custom professional Excel development featuring interactive dashboards, automated pivot tables, and advanced financial modeling.</p>
-                        <div class="card-tag text-primary-custom">Order via Khamsat →</div>
+                        <div class="card-tag" style="color: var(--primary-color);">Order via Khamsat →</div>
                     </a>
                 </div>
-                
-            </div>
+                </div>
         </div>
     </section>
 
     <section id="platforms" class="platforms-section mt-5">
         <div class="container">
-            <h6 class="text-primary-custom fw-bold mb-5 text-center" style="letter-spacing: 6px;">// GLOBAL CHANNELS</h6>
+            <h6 class="fw-bold mb-5 text-center" style="letter-spacing: 6px; color: var(--primary-color);" data-aos="fade-up">// GLOBAL CHANNELS</h6>
             <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="https://mostaql.com/u/Mahmoud_Ahmed0" class="service-card py-5 text-center" target="_blank">
                         <h4 class="fw-bold mb-2 text-white">MOSTAQL</h4>
                         <span class="text-secondary text-uppercase" style="font-size: 0.6rem; letter-spacing: 2px;">MENA Projects</span>
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://www.freelancer.com/u/mahmoudahmedr" class="service-card py-5 text-center" target="_blank">
                         <h4 class="fw-bold mb-2 text-white">FREELANCER</h4>
                         <span class="text-secondary text-uppercase" style="font-size: 0.6rem; letter-spacing: 2px;">Global Network</span>
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
                     <a href="https://khamsat.com/user/mahmoud_ahmed_rashad" class="service-card py-5 text-center" target="_blank">
                         <h4 class="fw-bold mb-2 text-white">KHAMSAT</h4>
                         <span class="text-secondary text-uppercase" style="font-size: 0.6rem; letter-spacing: 2px;">Micro Services</span>
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
                     <a href="https://kafiil.com/new-kafiil" class="service-card py-5 text-center" target="_blank">
                         <h4 class="fw-bold mb-2 text-white">KAFIIL</h4>
                         <span class="text-secondary text-uppercase" style="font-size: 0.6rem; letter-spacing: 2px;">Verified Talent</span>
@@ -228,12 +263,33 @@
         </div>
     </section>
 
-    <footer class="text-center text-uppercase fw-bold">
+    <footer class="text-center text-uppercase fw-bold" data-aos="fade-in">
         <div class="container">
             © 2026 Mahmoud Ahmed Ashour — Data Solutions
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تفعيل مكتبة الأنميشن
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // تأثير تغير الـ Navbar عند السكرول
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar-custom');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.8rem 0';
+                navbar.style.background = 'rgba(5, 8, 16, 0.95)';
+            } else {
+                navbar.style.padding = '1.2rem 0';
+                navbar.style.background = 'rgba(5, 8, 16, 0.85)';
+            }
+        });
+    </script>
 </body>
 </html>
