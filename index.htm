@@ -23,12 +23,14 @@
         theme: {
             extend: {
                 colors: {
-                    // لون أزرق مودرن مريح للعين وأكثر احترافية
-                    primary: '#3B82F6', 
-                    // لون خلفية أغمق (Deep Navy) بيدي فخامة
-                    darkBg: '#050810',
-                    // لون الكروت بلمسة زجاجية
-                    cardBg: '#0F172A',
+                    // اللون الأساسي أصبح أبيض صريح
+                    primary: '#FFFFFF', 
+                    // الخلفية سوداء مطلقة لتعطي فخامة وعمق
+                    darkBg: '#000000',
+                    // الكروت بلون رمادي داكن جداً (Zinc) لتحديد الأبعاد
+                    cardBg: '#09090b',
+                    // لون رمادي متوسط للنصوص الثانوية
+                    secondaryText: '#71717a'
                 }
             }
         }
@@ -40,26 +42,45 @@
 
     body { 
         font-family: 'Plus Jakarta Sans', sans-serif; 
-        background-color: #050810; 
-        color: #F8FAFC; 
+        background-color: #000000; 
+        color: #FFFFFF; 
         scroll-behavior: smooth; 
     }
 
-    /* تأثير توهج (Glow) أنعم وأكثر عصرية */
+    /* تأثير توهج أبيض خفيف بدلاً من الأزرق */
     .glow { 
-        box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); 
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.05); 
     }
 
-    /* تدرج لوني احترافي */
+    /* تدرج لوني من الأبيض للرمادي الفاتح */
     .blue-gradient { 
-        background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%); 
+        background: linear-gradient(135deg, #FFFFFF 0%, #a1a1aa 100%); 
     }
 
-    /* تخصيص شكل السكرول بار ليناسب التصميم */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #050810; }
-    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
+    /* تخصيص شكل السكرول بار بنظام Monochrome */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #000000; }
+    ::-webkit-scrollbar-thumb { 
+        background: #27272a; 
+        border-radius: 0px; /* الحواف الحادة بتدي شكل مودرن أكتر مع الـ B&W */
+    }
+    ::-webkit-scrollbar-thumb:hover { background: #FFFFFF; }
+
+    /* تأثير إضافي للصور عند مرور الماوس لتتناسب مع الستايل */
+    .bw-image {
+        filter: grayscale(100%) contrast(110%);
+        transition: all 0.5s ease;
+    }
+    
+    .bw-image:hover {
+        filter: grayscale(0%) contrast(100%);
+    }
+
+    /* تأثير تحديد النص */
+    ::selection {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
 </style>
 
 </head>
@@ -391,156 +412,189 @@
   
   
 
-<section id="projects" class="py-24 bg-[#050810] px-6 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none animate-pulse"></div>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <div class="max-w-6xl mx-auto relative z-10">
+<section id="projects" class="py-32 bg-[#030712] px-6 relative overflow-hidden font-['Inter']">
+    
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#22d3ee 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <div class="max-w-6xl mx-auto relative">
         
-        <header class="mb-16 border-l-4 border-primary pl-6" data-aos="fade-right">
-            <h2 class="text-primary text-sm tracking-[0.4em] mb-2 font-mono uppercase font-bold opacity-90">
-                // PORTFOLIO_V3
-            </h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-white tracking-tight">
-                Featured <span class="text-primary italic font-light animate-pulse">Work</span>
-            </h3>
-        </header>
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-full h-full pointer-events-none z-0">
+            <svg id="wire-svg" class="w-full h-full overflow-visible">
+                <path id="dynamic-wire" d="" fill="none" stroke="#1e293b" stroke-width="2" />
+                <g id="pulse-container"></g>
+            </svg>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="space-y-48 relative z-10">
             
-            <article class="group relative bg-[#0F172A]/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative h-52 overflow-hidden">
-                    <img src="https://i.ibb.co/8g8Mqbbc/Stock-Cake-Crimson-Sample-Testing-3124104-medium.webp" alt="Auxilio" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent"></div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Graduation Project</span>
-                        <span class="text-[9px] text-gray-500 font-mono">2022 — 2023</span>
+            <div class="flex flex-col md:flex-row items-center group project-node">
+                <div class="md:w-1/2 md:pr-24 text-right" data-aos="fade-right">
+                    <div class="text-cyan-500 font-['Fira_Code'] text-[10px] mb-2 font-bold tracking-widest uppercase">Graduation Project // 2023</div>
+                    <h4 class="text-3xl font-black text-white mb-4 group-hover:text-cyan-400 transition-colors">Auxilio — Blood Bank App</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">A mobile platform designed to optimize blood donation management and connect hospitals with donors.</p>
+                    <div class="flex flex-wrap justify-end gap-2">
+                        <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded text-[10px] font-bold text-cyan-400 uppercase">Flutter</span>
+                        <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded text-[10px] font-bold text-cyan-400 uppercase">Firebase</span>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Auxilio — Blood Bank App</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">A mobile platform designed to optimize blood donation management and connect hospitals with donors.</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Flutter</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Firebase</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">UI/UX Design</span>
-                    </div>
-
-                    <a href="https://github.com/mahmoudahmed1515/AUXILIO" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                        GitHub <span class="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
                 </div>
-            </article>
-
-            <article class="group relative bg-[#0F172A]/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative h-52 overflow-hidden">
-                    <img src="https://i.ibb.co/Z6PpfZpM/Screenshot-2026-03-09-100507.png" alt="Sales Dashboard" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent"></div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Digilians</span>
-                        <span class="text-[9px] text-gray-500 font-mono">Feb 2026</span>
+                <div class="md:w-1/2 md:pl-24" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5 bg-slate-900/30 p-2 transition-all duration-500 group-hover:border-cyan-500/30">
+                        <img src="https://i.ibb.co/8g8Mqbbc/Stock-Cake-Crimson-Sample-Testing-3124104-medium.webp" class="w-full h-56 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute top-4 right-4 border border-white/10 bg-black/60 backdrop-blur-md rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="https://github.com/mahmoudahmed1515/AUXILIO" target="_blank" class="text-white hover:text-cyan-400"><i class="ph ph-github-logo text-xl"></i></a>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Sales & Profit Dashboard</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Comprehensive sales performance dashboard in Excel using data modeling and advanced DAX measures.</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Power Pivot</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Power Query</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">DAX</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Excel Modeling</span>
-                    </div>
-
-                    <a href="https://github.com/mahmoudahmed1515/Interactive-Sales-Profit-Dashboard" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                        GitHub <span class="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="group relative bg-[#0F172A]/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col hover:-translate-y-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="relative h-52 overflow-hidden">
-                    <img src="https://i.ibb.co/S4SYQNft/Screenshot-2026-03-10-211912.png" alt="E-Commerce Analysis" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent"></div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Advanced Analytics</span>
-                        <span class="text-[9px] text-gray-500 font-mono">Feb 2026</span>
+            <div class="flex flex-col md:flex-row-reverse items-center group project-node">
+                <div class="md:w-1/2 md:pl-24 text-left" data-aos="fade-left">
+                    <div class="text-purple-500 font-['Fira_Code'] text-[10px] mb-2 font-bold tracking-widest uppercase">Machine Learning // 2026</div>
+                    <h4 class="text-3xl font-black text-white mb-4 group-hover:text-purple-400 transition-colors">Body Performance Classifier</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Neural Network pipeline utilizing fitness indicators to classify performance tiers with high accuracy.</p>
+                    <div class="flex flex-wrap justify-start gap-2">
+                        <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded text-[10px] font-bold text-purple-400 uppercase">Neural Networks</span>
+                        <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded text-[10px] font-bold text-purple-400 uppercase">Scikit-Learn</span>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">E-Commerce Sales Analysis</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Transforming raw transactional data into actionable business intelligence and logistics efficiency.</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Power Pivot</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Power Query</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Excel</span>
-                    </div>
-
-                    <a href="https://github.com/mahmoudahmed1515/E-Commerce-Sales-Analysis" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                        GitHub <span class="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
                 </div>
-            </article>
-
-            <article class="group relative bg-[#0F172A]/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative h-52 overflow-hidden">
-                    <img src="https://i.ibb.co/DHD2Fh3J/Screenshot-2026-04-22-194541.png" alt="Hotel Booking" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent"></div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase">Data Mining</span>
-                        <span class="text-[9px] text-gray-500 font-mono">Mar 2026</span>
+                <div class="md:w-1/2 md:pr-24" data-aos="fade-right">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5 bg-slate-900/30 p-2 transition-all duration-500 group-hover:border-purple-500/30">
+                        <img src="https://i.ibb.co/GfHX0vcY/Screenshot-2026-04-22-195818.png" class="w-full h-56 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute top-4 left-4 border border-white/10 bg-black/60 backdrop-blur-md rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="https://github.com/mahmoudahmed1515/Body-Performance-Intelligent-Classifier" target="_blank" class="text-white hover:text-purple-400"><i class="ph ph-github-logo text-xl"></i></a>
+                        </div>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Hotel Booking Cancellation</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Predicting booking cancellations using advanced data mining to optimize revenue management.</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">SQL</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Predictive Modeling</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">ERD</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Python (EDA)</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">ERD</span>
-                         
-                    </div>
-
-                    <a href="https://github.com/mahmoudahmed1515/Hotel-Booking-Business-Intelligence-Data-Mining" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                        GitHub <span class="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
                 </div>
-            </article>
+            </div>
 
-            <article class="group relative bg-[#0F172A]/40 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/40 shadow-2xl flex flex-col hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative h-52 overflow-hidden">
-                    <img src="https://i.ibb.co/GfHX0vcY/Screenshot-2026-04-22-195818.png" alt="Body Performance" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent"></div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow relative z-10">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="text-primary text-[10px] font-bold tracking-widest uppercase">AI & ML</span>
-                        <span class="text-[9px] text-gray-500 font-mono">Mar 2026</span>
+            <div class="flex flex-col md:flex-row items-center group project-node">
+                <div class="md:w-1/2 md:pr-24 text-right" data-aos="fade-right">
+                    <div class="text-amber-500 font-['Fira_Code'] text-[10px] mb-2 font-bold tracking-widest uppercase">Business Intelligence // 2026</div>
+                    <h4 class="text-3xl font-black text-white mb-4 group-hover:text-amber-400 transition-colors">Sales & Profit Dashboard</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Interactive BI report using Power Pivot and DAX to visualize profit leakage and sales trends.</p>
+                    <div class="flex flex-wrap justify-end gap-2">
+                        <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded text-[10px] font-bold text-amber-400 uppercase">Power Pivot</span>
+                        <span class="px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded text-[10px] font-bold text-amber-400 uppercase">DAX</span>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Body Performance Classifier</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">ML pipeline utilizing Neural Networks to classify fitness levels with high accuracy.</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8 mt-auto">
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Python</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Neural Network</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">Decision Tree</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">SVM</span>
-                        <span class="text-[9px] px-2 py-1 bg-white/5 border border-white/10 text-gray-400 rounded group-hover:border-primary/40 group-hover:text-primary transition-all">KNN</span>
-                    </div>
-
-                    <a href="https://github.com/mahmoudahmed1515/Body-Performance-Intelligent-Classifier" target="_blank" class="text-primary text-[11px] font-black uppercase tracking-widest flex items-center gap-2 group/link">
-                        GitHub <span class="group-hover/link:translate-x-2 transition-transform duration-300">→</span>
-                    </a>
                 </div>
-            </article>
+                <div class="md:w-1/2 md:pl-24" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5 bg-slate-900/30 p-2 transition-all duration-500 group-hover:border-amber-500/30">
+                        <img src="https://i.ibb.co/Z6PpfZpM/Screenshot-2026-03-09-100507.png" class="w-full h-56 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
 
+            <div class="flex flex-col md:flex-row-reverse items-center group project-node">
+                <div class="md:w-1/2 md:pl-24 text-left" data-aos="fade-left">
+                    <div class="text-emerald-500 font-['Fira_Code'] text-[10px] mb-2 font-bold tracking-widest uppercase">Data Analytics // 2026</div>
+                    <h4 class="text-3xl font-black text-white mb-4 group-hover:text-emerald-400 transition-colors">E-Commerce Sales Analysis</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Transforming raw transactional data into actionable business intelligence using advanced SQL queries.</p>
+                    <div class="flex flex-wrap justify-start gap-2">
+                        <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] font-bold text-emerald-400 uppercase">SQL</span>
+                        <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] font-bold text-emerald-400 uppercase">Power BI</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pr-24" data-aos="fade-right">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5 bg-slate-900/30 p-2 transition-all duration-500 group-hover:border-emerald-500/30">
+                        <img src="https://i.ibb.co/S4SYQNft/Screenshot-2026-03-10-211912.png" class="w-full h-56 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center group project-node">
+                <div class="md:w-1/2 md:pr-24 text-right" data-aos="fade-right">
+                    <div class="text-rose-500 font-['Fira_Code'] text-[10px] mb-2 font-bold tracking-widest uppercase">Data Mining // 2026</div>
+                    <h4 class="text-3xl font-black text-white mb-4 group-hover:text-rose-400 transition-colors">Hotel Booking Cancellation</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Predictive modeling for booking cancellations to optimize hotel revenue management using data mining.</p>
+                    <div class="flex flex-wrap justify-end gap-2">
+                        <span class="px-3 py-1 bg-rose-500/10 border border-rose-500/20 rounded text-[10px] font-bold text-rose-400 uppercase">SQL</span>
+                        <span class="px-3 py-1 bg-rose-500/10 border border-rose-500/20 rounded text-[10px] font-bold text-rose-400 uppercase">Orange</span>
+                        <span class="px-3 py-1 bg-rose-500/10 border border-rose-500/20 rounded text-[10px] font-bold text-rose-400 uppercase">RapidMiner</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-24" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/5 bg-slate-900/30 p-2 transition-all duration-500 group-hover:border-rose-500/30">
+                        <img src="https://i.ibb.co/DHD2Fh3J/Screenshot-2026-04-22-194541.png" class="w-full h-56 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    const wirePath = document.getElementById('dynamic-wire');
+    const svg = document.getElementById('wire-svg');
+    const container = document.getElementById('pulse-container');
+    let mouseX = window.innerWidth / 2;
+    let targetX = window.innerWidth / 2;
+    let isNear = false;
+    let lastPulseTime = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        const rect = svg.getBoundingClientRect();
+        targetX = e.clientX - rect.left;
+        const wireCenter = rect.width / 2;
+        isNear = Math.abs(targetX - wireCenter) < 120;
+    });
+
+    function createPulse() {
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("r", "2");
+        circle.setAttribute("fill", "#22d3ee");
+        circle.style.filter = "drop-shadow(0 0 5px #22d3ee)";
+        container.appendChild(circle);
+
+        let pos = 0;
+        const totalLength = wirePath.getTotalLength();
+        const speed = 8;
+
+        const animate = () => {
+            pos += speed;
+            if (pos < totalLength) {
+                const point = wirePath.getPointAtLength(pos);
+                circle.setAttribute('cx', point.x);
+                circle.setAttribute('cy', point.y);
+                requestAnimationFrame(animate);
+            } else {
+                circle.remove();
+            }
+        };
+        animate();
+    }
+
+    function energyLoop(timestamp) {
+        if (isNear && timestamp - lastPulseTime > 250) {
+            createPulse();
+            lastPulseTime = timestamp;
+            wirePath.style.stroke = "#22d3ee";
+            wirePath.style.filter = "drop-shadow(0 0 5px #22d3ee)";
+        } else if (!isNear) {
+            wirePath.style.stroke = "#1e293b";
+            wirePath.style.filter = "none";
+        }
+        requestAnimationFrame(energyLoop);
+    }
+
+    function updateWire() {
+        mouseX += (targetX - mouseX) * 0.05;
+        const width = svg.clientWidth;
+        const height = svg.clientHeight;
+        const midX = width / 2;
+        const curve = (mouseX - midX) * 0.3;
+        
+        const d = `M ${midX} 0 Q ${midX + curve} ${height/2} ${midX} ${height}`;
+        wirePath.setAttribute('d', d);
+        
+        requestAnimationFrame(updateWire);
+    }
+
+    updateWire();
+    requestAnimationFrame(energyLoop);
+</script>
   
   
   
